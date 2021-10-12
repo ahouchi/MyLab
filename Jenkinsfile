@@ -67,6 +67,7 @@ pipeline{
         stage ('Deploy to Tomcat'){
             steps {
                 echo "Deploying ...."
+                
                 sshPublisher(publishers: 
                 [sshPublisherDesc(
                     configName: 'Ansible_Controller', 
