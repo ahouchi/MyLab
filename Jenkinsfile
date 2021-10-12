@@ -70,7 +70,7 @@ pipeline{
                 
                 sshPublisher(publishers: 
                 [sshPublisherDesc(
-                    configName: 'Ansible_Controller', 
+                    configName: 'master_node', 
                     transfers: [
                         sshTransfer(
                                 cleanRemote:false,
