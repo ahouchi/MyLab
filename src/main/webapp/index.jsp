@@ -91,7 +91,7 @@
     <hr>
 
     <footer>
-        <p>&copy; vinay's devops lab 2020-2021</p>
+        <p>&copy; Devops Lab 2020-2021</p>
     </footer>
 </div> <!-- /container -->
 
