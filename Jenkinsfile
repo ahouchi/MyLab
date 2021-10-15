@@ -10,7 +10,7 @@ pipeline{
        Version = readMavenPom().getVersion()
        Name = readMavenPom().getName()
        GroupId = readMavenPom().getGroupId()
-       NexusRepo = "deploy-releases"
+       NexusRepo = 'maven-releases'
     }
     
     stages {
