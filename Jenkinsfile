@@ -73,9 +73,9 @@ pipeline{
                     configName: 'master_node', 
                     transfers: [
                         sshTransfer(
-                                cleanRemote:false,
-                                execCommand: 'ansible-playbook /opt/cicd/downloadanddeploy_as_tomcat_user.yaml -i /opt/cicd/hosts',
-                                execTimeout: 120000
+                              cleanRemote:false,
+                              execCommand: 'ansible-playbook --extra-vars "'${Version}'" /opt/cicd/downloadanddeploy_as_tomcat_user.yaml -i /opt/cicd/hosts',
+                              execTimeout: 120000
                         )
                     ], 
                     usePromotionTimestamp: false, 
