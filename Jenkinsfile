@@ -10,6 +10,7 @@ pipeline{
        Version = readMavenPom().getVersion()
        Name = readMavenPom().getName()
        GroupId = readMavenPom().getGroupId()
+       NexusRepo = "deploy-releases"
     }
     
     stages {
@@ -34,9 +35,7 @@ pipeline{
         stage ('Publish to Nexus'){
             steps {
                 script{
-
-                def NexusRepo = "deploy-releases"
-                
+                    
                 nexusArtifactUploader artifacts: 
                 [[artifactId: "${ArtifactId}", 
                 classifier: '', 
@@ -49,6 +48,7 @@ pipeline{
                 protocol: 'http', 
                 repository: "${NexusRepo}", 
                 version: "${Version}"
+                    
                }
            }
         }
