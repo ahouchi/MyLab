@@ -74,7 +74,7 @@ pipeline{
                     transfers: [
                         sshTransfer(
                               cleanRemote:false,
-                              execCommand: 'ansible-playbook --extra-vars "'${ArtifactID}'" /opt/cicd/downloadanddeploy_as_tomcat_user.yaml -i /opt/cicd/hosts',
+                              execCommand: 'ansible-playbook  /opt/cicd/downloadanddeploy_as_tomcat_user.yaml -i /opt/cicd/hosts',
                               execTimeout: 120000
                         )
                     ], 
